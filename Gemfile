@@ -11,6 +11,12 @@ group :development, :test do
 
   # add RSpec for rails
   gem 'rspec-rails', '2.13.1'
+  # Add Guard to automate testing
+  gem 'guard-rspec', '2.5.0'
+  # Add Spork to speed up testing
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.9'
 end
 
 group :test do
@@ -19,6 +25,9 @@ group :test do
   # Use capybara for simulating user interactions
   gem 'capybara', '2.1.0'
 end
+
+# Adds Growl notifications on OSX, Comment out on Windows
+gem 'growl', '1.0.3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

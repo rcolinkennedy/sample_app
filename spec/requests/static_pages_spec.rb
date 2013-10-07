@@ -54,13 +54,10 @@ describe "Static pages" do
     expect(page).to have_title(full_title('Help'))
     click_link "Contact"
     expect(page).to have_title(full_title('Contact Us'))
-
+    click_link "Home"
+    click_link "Sign up now!"
+    expect(page).to have_title(full_title('Sign Up'))
+    click_link "sample app"
+    expect(page).to have_title(full_title(''))
   end
 end
-
-#Moved down from above - even when commented out, while in loop was causing errors
-#    click_link "Home"
-#    click_link "Sign up now!"
-#    expect(page).to have_title(full_title('Sign Up'))
-#    click_link "Sample App"
-#    expect(page).to have_title(full_title(''))

@@ -7,12 +7,15 @@ gem 'rails', '4.0.0'
 # Add Twitter Bootstrap, and convert to SASS
 gem 'bootstrap-sass', '2.3.2.0'
 
-# set up dev group, put sqlite in it so Heroku doesnt barf back asking for PG
+# Implement bcrpyt for password encryption
+gem 'bcrypt-ruby', '3.0.1'
+
+# Set up dev group, put sqlite in it so Heroku doesnt barf back asking for PG
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '1.3.8'
 
-  # add RSpec for rails
+  # Add RSpec for rails
   gem 'rspec-rails', '2.13.1'
   # Add Guard to automate testing
   gem 'guard-rspec', '2.5.0'
@@ -47,7 +50,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Turbolinks makes following links in your web application faster. 
+    # Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
